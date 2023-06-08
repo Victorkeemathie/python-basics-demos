@@ -138,3 +138,47 @@ print(text.isalpha())  # True
 # Syntax: string.isalnum()
 text = "Hello123"
 print(text.isalnum())  # True
+
+# String Formatting Methods in Python
+# 1. Formatting with % Operator (Old)
+# Explanation: This is the oldest method of string formatting in Python, using the % operator.
+# The %s placeholder is used for strings, %d for integers, %f for floats, and %b for binary format.
+# Syntax: print("%s %s" % (string_variable, integer_variable))
+# Example:
+name = "John"
+age = 25
+print("My name is %s and my age is %d." % (name, age))
+
+# 2. Formatting with format() method (New)
+# Explanation: The format() method is introduced in Python 3 as a more versatile way to format strings.
+# Curly braces {} are used as placeholders, and the variables are passed as arguments to the format() method.
+# Syntax: print("{} {} {}".format(variable1, variable2, variable3))
+# Example:
+name = "Alice"
+age = 30
+city = "New York"
+print("My name is {} and I am {} years old. I live in {}.".format(name, age, city))
+
+# 3. Formatting with f-strings
+# Explanation: f-strings are introduced in Python 3.6+ and provide a concise and convenient way to format strings.
+# The variables are enclosed in curly braces {} preceded by the 'f' prefix.
+# Syntax: print(f"Hi, I am {variable} and my age is {expression}")
+# Example:
+name = "Bob"
+age = 35
+print(f"Hi, I am {name} and my age is {age}")
+# 4. Formatting with String Template Class
+# Explanation: The String Template class provides another way to format strings using placeholders.
+# Placeholders are represented by dollar signs $ and variables are passed using the substitute() method.
+# Syntax:
+from string import Template
+template = Template("$variable1 $variable2")
+result = template.substitute(variable1="Hello", variable2="World")
+print(result)
+# Example:
+from string import Template
+name = "Sarah"
+age = 28
+template = Template("My name is $name and my age is $age.")
+result = template.substitute(name=name, age=age)
+print(result)
